@@ -22,7 +22,6 @@ RUN wget -q https://services.gradle.org/distributions/gradle-3.0-bin.zip -O grad
     && unzip -jo -d ${JAVA_HOME}/jre/lib/security /tmp/unlimited_jce_policy.zip \
     && cd /meta \
     && gradle build \
-    && gradle test \
     && npm install -g gulp \
     && npm install -g newman \
     && npm install -g git \
