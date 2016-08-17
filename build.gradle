@@ -1,16 +1,14 @@
 buildscript {
-	ext {
-		springBootVersion = '1.4.0.RELEASE'
-	}
-	repositories {
+  ext {
+    springBootVersion = '1.4.0.RELEASE'
+  }
+  repositories {
     jcenter()
-    	}
-	}
-  
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.0.1")
-	}
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.0.1")
+  }
 }
 
 apply plugin: 'java'
@@ -24,7 +22,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+  mavenCentral()
   mavenLocal()
   jcenter()
 }
