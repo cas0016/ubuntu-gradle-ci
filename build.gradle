@@ -1,13 +1,15 @@
 buildscript {
-  ext {
-    springBootVersion = '1.4.0.RELEASE'
-  }
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.0.1")
+	ext {
+		springBootVersion = '1.4.0.RELEASE'
+	}
+	repositories {
+		jcenter()
+		maven { url "https://plugins.gradle.org/m2/" }
+	}
+	dependencies {
+		classpath(group: 'org.sonarqube.gradle', name: 'gradle-sonarqube-plugin', version: '2.0.1')
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE")
   }
 }
 
