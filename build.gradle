@@ -7,18 +7,14 @@ buildscript {
 		maven { url "https://plugins.gradle.org/m2/" }
 	}
 	dependencies {
-		classpath(group: 'org.sonarqube.gradle', name: 'gradle-sonarqube-plugin', version: '2.0.1')
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 		classpath("io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE")
   }
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'application'
 apply plugin: 'spring-boot'
-apply plugin: 'jacoco'
-apply plugin: 'org.sonarqube'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
