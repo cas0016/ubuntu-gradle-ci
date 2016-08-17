@@ -24,6 +24,8 @@ RUN wget -q https://services.gradle.org/distributions/gradle-3.0-bin.zip -O grad
     && gradle build \
     && gradle test \
     && npm install -g gulp \
+    && npm install -g newman \
+    && npm install -g git \
     && git config --global user.name CI-BuildBot \
     && git config --global user.email svc_DMSBUILD \
     && tar -xzf cf-cli*.tgz -C /usr/bin/
