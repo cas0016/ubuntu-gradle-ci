@@ -41,7 +41,6 @@ dependencies {
   compile 'org.springframework.boot:spring-boot-starter-data-jpa'
   compile 'org.springframework:spring-jdbc'
   compile 'com.lmax:disruptor:3.3.0'
-  compile 'com.oracle:ojdbc6:11.2.0.2.0'
   compile 'org.apache.tomcat:tomcat-dbcp:8.0.5'
   compile 'com.google.code.gson:gson'
   compile 'org.apache.commons:commons-lang3:3.4'
@@ -60,6 +59,7 @@ dependencies {
   testCompile 'org.springframework.restdocs:spring-restdocs-mockmvc:1.0.0.RELEASE'
   testCompile 'org.mockito:mockito-core:1.+'
   testCompile 'org.powermock:powermock-api-mockito:1.6.4'
+  testCompile 'com.h2database:h2'
 }
 
 task cacheDeps {
