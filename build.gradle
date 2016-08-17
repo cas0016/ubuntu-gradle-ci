@@ -64,3 +64,10 @@ dependencies {
 task cacheDeps {
 	print("Downloading dependencies")
 }
+
+allprojects {
+	configurations.all {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+		exclude group: 'javax.servlet'
+	}
+}
