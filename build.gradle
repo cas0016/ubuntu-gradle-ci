@@ -29,8 +29,6 @@ dependencies {
   compile group: 'com.google.guava', name: 'guava', version: '19.0'
   compile 'org.springframework.cloud:spring-cloud-spring-service-connector'
   compile 'org.springframework.cloud:spring-cloud-cloudfoundry-connector'
-  compile 'org.springframework.cloud:spring-cloud-consul'
-  compile 'org.springframework.cloud:spring-cloud-lattice'
   compile 'org.springframework.boot:spring-boot-devtools'
   compile 'org.springframework.boot:spring-boot-starter-actuator'
   compile 'commons-collections:commons-collections:3.2.2'
