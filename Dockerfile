@@ -1,8 +1,8 @@
 FROM java:8
 
 ENV PORT=8080 \
-    GRADLE_HOME=/usr/bin/gradle-3.0 \
-    PATH=$PATH:/usr/bin/gradle-3.0/bin:/meta/.cli
+    GRADLE_HOME=/usr/bin/gradle-2.9 \
+    PATH=$PATH:/usr/bin/gradle-2.9/bin:/meta/.cli
 
 EXPOSE 8080
 
@@ -10,7 +10,7 @@ ADD . /meta
 
 WORKDIR /usr/bin
 
-RUN wget -q https://services.gradle.org/distributions/gradle-3.0-bin.zip -O gradle.zip \
+RUN wget -q https://services.gradle.org/distributions/gradle-2.9-bin.zip -O gradle.zip \
     && unzip -q gradle.zip \
     && rm gradle.zip \
     && wget https://nodejs.org/dist/v4.5.0/node-v4.5.0-linux-x64.tar.gz \
