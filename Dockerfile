@@ -29,3 +29,13 @@ RUN wget -q https://services.gradle.org/distributions/gradle-2.9-bin.zip -O grad
     && git config --global user.name CI-BuildBot \
     && git config --global user.email svc_DMSBUILD \
     && tar -xzf cf-cli*.tgz -C /usr/bin/
+
+CD spring_1_3_0_sample
+
+RUN gradle build \
+  && gradle test \
+
+CD ../spring_1_3_3_sample
+
+RUN gradle build \
+  && gradle test \
