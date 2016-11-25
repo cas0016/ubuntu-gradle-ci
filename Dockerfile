@@ -29,6 +29,7 @@ RUN wget -q https://services.gradle.org/distributions/gradle-2.9-bin.zip -O grad
     && npm install -g karma-coverage \
     && npm install -g jasmine \
     && npm install -g istanbul \
+    && npm install -g node-sass \
     && npm install -g git \
     && git config --global user.name CI-BuildBot \
     && git config --global user.email svc_DMSBUILD \
