@@ -20,7 +20,7 @@ RUN wget -q https://services.gradle.org/distributions/gradle-2.9-bin.zip -O grad
     && npm -v \
     && curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" -o /tmp/unlimited_jce_policy.zip "http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip" \
     && unzip -jo -d ${JAVA_HOME}/jre/lib/security /tmp/unlimited_jce_policy.zip \
-    && wget http://concourse-dip.apps-np.homedepot.com/api/v1/cli?arch=amd64&platform=linux -O /usr/bin/fly \
+    && wget -q http://concourse-dip.apps-np.homedepot.com/api/v1/cli?arch=amd64&platform=linux -O /usr/bin/fly \
     && cd /meta \
     && gradle build \
     && gradle test \
