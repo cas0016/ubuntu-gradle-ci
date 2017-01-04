@@ -14,7 +14,7 @@ RUN wget -q https://services.gradle.org/distributions/gradle-2.9-bin.zip -O grad
     && unzip -q gradle.zip \
     && rm gradle.zip \
     && wget -q https://github.com/concourse/concourse/releases/download/v2.5.1/fly_linux_amd64 -O fly \
-    && chmod +x usr/bin/fly \
+    && chmod +x /usr/bin/fly \
     && wget https://nodejs.org/dist/v4.5.0/node-v4.5.0-linux-x64.tar.gz \
     && tar -xzf "node-v4.5.0-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
     && rm "node-v4.5.0-linux-x64.tar.gz" \
