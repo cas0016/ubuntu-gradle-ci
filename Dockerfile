@@ -11,14 +11,12 @@ ADD . /meta
 WORKDIR /usr/bin
 
 RUN wget -q https://services.gradle.org/distributions/gradle-2.9-bin.zip -O gradle.zip \
-    && wget -q http://concourse-dip.apps-np.homedepot.com/api/v1/cli\?arch=amd64\&platform\=linux -O /usr/bin/fly \
     && unzip -q gradle.zip \
     && rm gradle.zip \
+    && wget -q http://concourse-dip.apps-np.homedepot.com/api/v1/cli\?arch\=amd64\&platform\=linux -O /usr/bin/fly \
     && wget https://nodejs.org/dist/v4.5.0/node-v4.5.0-linux-x64.tar.gz \
     && tar -xzf "node-v4.5.0-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
     && rm "node-v4.5.0-linux-x64.tar.gz" \
-    && node -v \
-    && npm -v \
     && curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" -o /tmp/unlimited_jce_policy.zip "http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip" \
     && unzip -jo -d ${JAVA_HOME}/jre/lib/security /tmp/unlimited_jce_policy.zip \
     && cd /meta \
