@@ -23,7 +23,7 @@ RUN wget -q https://services.gradle.org/distributions/gradle-2.9-bin.zip -O grad
     && cd /meta \
     && gradle build \
     && gradle test \
-    && npm install -g gulp \
+    && npm install -g bower gulp karma \
     && npm install -g newman \
     && npm install -g git \
     && git config --global user.name CI-BuildBot \
