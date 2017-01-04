@@ -13,7 +13,7 @@ WORKDIR /usr/bin
 RUN wget -q https://services.gradle.org/distributions/gradle-2.9-bin.zip -O gradle.zip \
     && unzip -q gradle.zip \
     && rm gradle.zip \
-    && wget -q http://concourse-dip.apps-np.homedepot.com/api/v1/cli\?arch\=amd64\&platform\=linux -O /usr/bin/fly \
+    && wget -q http://concourse-dip.apps-np.homedepot.com/api/v1/cli?arch=amd64&platform=linux -O fly \
     && wget https://nodejs.org/dist/v4.5.0/node-v4.5.0-linux-x64.tar.gz \
     && tar -xzf "node-v4.5.0-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
     && rm "node-v4.5.0-linux-x64.tar.gz" \
