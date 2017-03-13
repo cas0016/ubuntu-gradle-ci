@@ -15,9 +15,9 @@ RUN wget -q https://services.gradle.org/distributions/gradle-2.9-bin.zip -O grad
     && rm gradle.zip \
     && wget -q https://github.com/concourse/concourse/releases/download/v2.5.1/fly_linux_amd64 -O fly \
     && chmod +x /usr/bin/fly \
-    && wget https://nodejs.org/dist/v4.5.0/node-v4.5.0-linux-x64.tar.gz \
-    && tar -xzf "node-v4.5.0-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
-    && rm "node-v4.5.0-linux-x64.tar.gz" \
+    && wget https://nodejs.org/dist/v7.5.0/node-v7.5.0-linux-x64.tar.gz \
+    && tar -xzf "node-v7.5.0-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
+    && rm "node-v7.5.0-linux-x64.tar.gz" \
     && apt-get update --assume-yes\
     && apt-get install build-essential --assume-yes\
     && curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" -o /tmp/unlimited_jce_policy.zip "http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip" \
